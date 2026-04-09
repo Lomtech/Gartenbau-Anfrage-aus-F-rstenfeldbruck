@@ -54,7 +54,6 @@
         -webkit-font-smoothing: antialiased;
       }
 
-      /* Subtle dot texture */
       body::before {
         content: "";
         position: fixed;
@@ -64,7 +63,7 @@
         background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232d6a4f' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
       }
 
-      /* ─── Layout helpers ─────────────────────────────── */
+      /* ─── Layout ─────────────────────────────────────── */
       .wrap {
         width: 100%;
         max-width: 1024px;
@@ -98,7 +97,6 @@
       .fu3 {
         animation: fadeUp 0.6s 0.3s ease both;
       }
-
       @keyframes spin {
         to {
           transform: rotate(360deg);
@@ -108,7 +106,7 @@
         animation: spin 0.8s linear infinite;
       }
 
-      /* ─── Icon helper ────────────────────────────────── */
+      /* ─── Icons ──────────────────────────────────────── */
       .ic {
         width: 1.25rem;
         height: 1.25rem;
@@ -129,9 +127,31 @@
         color: var(--green);
       }
 
-      /* ════════════════════════════════════════════════════
-       HEADER
-    ════════════════════════════════════════════════════ */
+      /* ─── Upload zone ────────────────────────────────── */
+      .upload-zone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+        border: 2px dashed var(--sage-200);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        cursor: pointer;
+        background: var(--warm-50);
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+      .upload-zone:hover {
+        border-color: var(--green);
+        background: var(--sage-50);
+      }
+      .upload-txt {
+        font-size: 0.75rem;
+        color: var(--gray-500);
+      }
+
+      /* ═══ HEADER ════════════════════════════════════════ */
       .hdr {
         position: sticky;
         top: 0;
@@ -174,7 +194,6 @@
           display: inline;
         }
       }
-
       .tel-link {
         display: flex;
         align-items: center;
@@ -203,9 +222,7 @@
         }
       }
 
-      /* ════════════════════════════════════════════════════
-       HERO
-    ════════════════════════════════════════════════════ */
+      /* ═══ HERO ══════════════════════════════════════════ */
       .hero {
         background: linear-gradient(
           160deg,
@@ -232,7 +249,6 @@
         }
       }
 
-      /* Eyebrow badge */
       .eyebrow {
         display: inline-flex;
         align-items: center;
@@ -255,7 +271,6 @@
         display: inline-block;
       }
 
-      /* H1 */
       h1 {
         font-family: "Lora", serif;
         font-weight: 700;
@@ -278,7 +293,6 @@
         color: var(--gray-800);
       }
 
-      /* Trust list */
       .trust-list {
         list-style: none;
         display: flex;
@@ -303,9 +317,7 @@
         color: var(--gray-500);
       }
 
-      /* ════════════════════════════════════════════════════
-       FORM CARD
-    ════════════════════════════════════════════════════ */
+      /* ═══ FORM CARD ═════════════════════════════════════ */
       .card {
         background: #fff;
         border-radius: 1rem;
@@ -318,7 +330,6 @@
           padding: 2rem;
         }
       }
-
       .card-title {
         font-family: "Lora", serif;
         font-size: 1.25rem;
@@ -331,7 +342,6 @@
         margin-bottom: 1.5rem;
       }
 
-      /* Fields */
       .field {
         margin-bottom: 1rem;
       }
@@ -345,7 +355,6 @@
       .req {
         color: var(--red);
       }
-
       .field input,
       .field textarea {
         width: 100%;
@@ -372,7 +381,6 @@
         resize: none;
       }
 
-      /* Inline field error */
       .ferr {
         font-size: 0.72rem;
         color: var(--red);
@@ -383,7 +391,7 @@
         display: block;
       }
 
-      /* ─── CTA Button ─────────────────────────────────── */
+      /* ─── Buttons ────────────────────────────────────── */
       .btn {
         display: flex;
         align-items: center;
@@ -420,7 +428,6 @@
         box-shadow: none;
       }
 
-      /* Inverted variant (white bg) */
       .btn-inv {
         display: inline-flex;
         align-items: center;
@@ -433,16 +440,15 @@
         font-weight: 600;
         padding: 0.9rem 2rem;
         border-radius: 0.75rem;
-        text-decoration: none;
         border: none;
         cursor: pointer;
+        text-decoration: none;
         transition: background 0.2s;
       }
       .btn-inv:hover {
         background: var(--sage-50);
       }
 
-      /* Legal line below button */
       .legal {
         font-size: 0.7rem;
         text-align: center;
@@ -492,9 +498,7 @@
         max-width: 17rem;
       }
 
-      /* ════════════════════════════════════════════════════
-       HOW IT WORKS
-    ════════════════════════════════════════════════════ */
+      /* ═══ HOW IT WORKS ══════════════════════════════════ */
       .how {
         background: #fff;
         border-top: 1px solid var(--sage-100);
@@ -503,8 +507,6 @@
         position: relative;
         z-index: 1;
       }
-
-      /* Section heading shared */
       .sec-h {
         font-family: "Lora", serif;
         font-size: clamp(1.4rem, 4vw, 2rem);
@@ -519,7 +521,6 @@
         margin-top: 0.4rem;
         margin-bottom: 2.5rem;
       }
-
       .steps {
         display: grid;
         gap: 2rem;
@@ -557,9 +558,7 @@
         line-height: 1.6;
       }
 
-      /* ════════════════════════════════════════════════════
-       SERVICES
-    ════════════════════════════════════════════════════ */
+      /* ═══ SERVICES ══════════════════════════════════════ */
       .svcs {
         background: var(--warm-100);
         padding-block: 4rem;
@@ -594,9 +593,7 @@
         flex-shrink: 0;
       }
 
-      /* ════════════════════════════════════════════════════
-       SECOND CTA BANNER
-    ════════════════════════════════════════════════════ */
+      /* ═══ SECOND CTA BANNER ═════════════════════════════ */
       .banner {
         background: var(--green-dark);
         padding-block: 4rem;
@@ -617,37 +614,7 @@
         margin-bottom: 2rem;
       }
 
-      /* ════════════════════════════════════════════════════
-       DATENSCHUTZ
-    ════════════════════════════════════════════════════ */
-      .dsgvo {
-        background: var(--warm-100);
-        padding-block: 3rem;
-        position: relative;
-        z-index: 1;
-      }
-      .dsgvo h2 {
-        font-family: "Lora", serif;
-        font-size: 1.2rem;
-        color: var(--gray-800);
-        margin-bottom: 1rem;
-      }
-      .dsgvo p {
-        font-size: 0.75rem;
-        color: var(--gray-500);
-        line-height: 1.9;
-      }
-      .dsgvo a {
-        text-decoration: underline;
-        color: inherit;
-      }
-      .dsgvo a:hover {
-        color: var(--gray-700);
-      }
-
-      /* ════════════════════════════════════════════════════
-       FOOTER
-    ════════════════════════════════════════════════════ */
+      /* ═══ FOOTER ════════════════════════════════════════ */
       .ftr {
         background: #fff;
         border-top: 1px solid var(--sage-100);
@@ -681,9 +648,7 @@
         color: var(--gray-600);
       }
 
-      /* ════════════════════════════════════════════════════
-       STICKY MOBILE CTA
-    ════════════════════════════════════════════════════ */
+      /* ═══ STICKY MOBILE CTA ═════════════════════════════ */
       .sticky {
         display: none;
         position: fixed;
@@ -708,9 +673,7 @@
   </head>
 
   <body>
-    <!-- ══════════════════════════════════════════
-       HEADER
-  ══════════════════════════════════════════ -->
+    <!-- HEADER -->
     <header class="hdr">
       <div class="wrap">
         <div class="hdr-inner">
@@ -720,7 +683,6 @@
               >Gartenbau<span class="logo-sub">Fürstenfeldbruck</span></span
             >
           </div>
-
           <a href="tel:+4981411234567" class="tel-link">
             <svg class="ic ic-sm" viewBox="0 0 24 24" aria-hidden="true">
               <path
@@ -737,24 +699,21 @@
     </header>
 
     <main>
-      <!-- ══════════════════════════════════════════
-         HERO + FORM
-    ══════════════════════════════════════════ -->
+      <!-- HERO + FORM -->
       <section class="hero">
         <div class="wrap">
           <div class="hero-grid">
-            <!-- Left: Copy + Trust -->
+            <!-- Copy -->
             <div class="fu">
               <div class="eyebrow">
                 <span class="eyebrow-dot" aria-hidden="true"></span>
                 Fürstenfeldbruck &amp; Umgebung
               </div>
-
               <h1>
-                Ihr Gartenprojekt.<br />
-                <span>Regional. Schnell.<br />Kostenlos vermittelt.</span>
+                Ihr Gartenprojekt.<br /><span
+                  >Regional. Schnell.<br />Kostenlos vermittelt.</span
+                >
               </h1>
-
               <p class="hero-lead">
                 Beschreiben Sie Ihr Vorhaben – wir verbinden Sie kostenlos und
                 unverbindlich mit geprüften Gartenbau-Fachbetrieben aus
@@ -783,7 +742,6 @@
                     </p>
                   </div>
                 </li>
-
                 <li class="trust-item">
                   <svg class="ic ic-grn" viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -799,7 +757,6 @@
                     </p>
                   </div>
                 </li>
-
                 <li class="trust-item">
                   <svg class="ic ic-grn" viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -817,7 +774,6 @@
                     </p>
                   </div>
                 </li>
-
                 <li class="trust-item">
                   <svg class="ic ic-grn" viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -834,7 +790,7 @@
               </ul>
             </div>
 
-            <!-- Right: Form card -->
+            <!-- Form card -->
             <div class="fu2" id="form-anchor">
               <div class="card">
                 <h2 class="card-title">Angebot jetzt anfordern</h2>
@@ -842,7 +798,7 @@
                   Kostenlos · Unverbindlich · In 24 h Rückmeldung
                 </p>
 
-                <!-- Success state (hidden until submit) -->
+                <!-- Success state -->
                 <div id="ok" role="alert">
                   <div class="ok-icon">
                     <svg
@@ -865,7 +821,7 @@
                   </p>
                 </div>
 
-                <!-- Lead form -->
+                <!-- Form -->
                 <form
                   id="lf"
                   action="https://formspree.io/f/xreovkwg"
@@ -898,7 +854,7 @@
                       id="phone"
                       name="telefon"
                       required
-                      placeholder="+49 8141 …"
+                      placeholder="+49 8141 ..."
                       autocomplete="tel"
                     />
                     <p class="ferr" id="e-phone">
@@ -915,14 +871,14 @@
                       name="projekt"
                       required
                       rows="4"
-                      placeholder="z.B. Rasenpflege, Gartengestaltung, Heckenschnitt, Pflasterarbeiten …"
+                      placeholder="z.B. Rasenpflege, Gartengestaltung, Heckenschnitt, Pflasterarbeiten ..."
                     ></textarea>
                     <p class="ferr" id="e-proj">
                       Bitte beschreiben Sie Ihr Projekt kurz.
                     </p>
                   </div>
 
-                  <!-- Anti-spam honeypot -->
+                  <!-- Formspree anti-spam -->
                   <input
                     type="text"
                     name="_gotcha"
@@ -933,7 +889,7 @@
                   <input
                     type="hidden"
                     name="_subject"
-                    value="Neue Gartenbau-Anfrage – Fürstenfeldbruck"
+                    value="Neue Gartenbau-Anfrage - Fürstenfeldbruck"
                   />
 
                   <button type="submit" id="sbmt" class="btn">
@@ -949,7 +905,10 @@
 
                   <p class="legal">
                     Mit dem Absenden stimmen Sie unserer
-                    <a href="#datenschutz">Datenschutzerklärung</a> zu.
+                    <a href="impressum.html#datenschutz"
+                      >Datenschutzerklärung</a
+                    >
+                    zu.
                   </p>
                 </form>
               </div>
@@ -958,9 +917,7 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════════
-         HOW IT WORKS
-    ══════════════════════════════════════════ -->
+      <!-- HOW IT WORKS -->
       <section class="how">
         <div class="wrap">
           <h2 class="sec-h">So einfach funktioniert es</h2>
@@ -990,9 +947,7 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════════
-         SERVICES
-    ══════════════════════════════════════════ -->
+      <!-- SERVICES -->
       <section class="svcs">
         <div class="wrap">
           <h2 class="sec-h">Was wir vermitteln</h2>
@@ -1031,11 +986,9 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════════
-         SECOND CTA BANNER
-    ══════════════════════════════════════════ -->
+      <!-- SECOND CTA BANNER -->
       <section class="banner">
-        <div class="wrap-sm" style="text-align: center">
+        <div class="wrap-sm">
           <h2>Bereit für Ihren Traumgarten?</h2>
           <p>
             Jetzt kostenlos Angebot anfordern – regionale Fachbetriebe melden
@@ -1058,48 +1011,27 @@
           </a>
         </div>
       </section>
-
-      <!-- ══════════════════════════════════════════
-         DATENSCHUTZ
-    ══════════════════════════════════════════ -->
-      <section id="datenschutz" class="dsgvo">
-        <div class="wrap-sm">
-          <h2>Datenschutz</h2>
-          <p>
-            Ihre Daten werden ausschließlich zur Vermittlung von Angeboten
-            regionaler Gartenbau-Betriebe verwendet und nicht an Dritte
-            weitergegeben, die nicht im Zusammenhang mit der Angebotsstellung
-            stehen. Die Verarbeitung erfolgt gemäß DSGVO Art. 6 Abs. 1 lit. b.
-            Sie können jederzeit Auskunft, Löschung oder Berichtigung Ihrer
-            Daten verlangen. Kontakt:
-            <a href="mailto:info@gartenbau-ffb.de">info@gartenbau-ffb.de</a>
-          </p>
-        </div>
-      </section>
     </main>
 
-    <!-- ══════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════ -->
+    <!-- FOOTER -->
     <footer class="ftr">
       <div class="wrap">
         <div class="ftr-inner">
           <span
-            >© 2025 Gartenbau Fürstenfeldbruck – Alle Rechte vorbehalten</span
+            >&#169; 2025 Gartenbau Fürstenfeldbruck &#8211; Alle Rechte
+            vorbehalten</span
           >
           <nav class="ftr-links" aria-label="Footer-Navigation">
-            <a href="#datenschutz">Datenschutz</a>
-            <a href="#impressum">Impressum</a>
+            <a href="impressum.html#datenschutz">Datenschutz</a>
+            <a href="impressum.html#impressum">Impressum</a>
           </nav>
         </div>
       </div>
     </footer>
 
-    <!-- ══════════════════════════════════════════
-       STICKY MOBILE CTA
-  ══════════════════════════════════════════ -->
+    <!-- STICKY MOBILE CTA -->
     <div class="sticky" id="sticky-bar">
-      <a href="#form-anchor" class="btn" id="sticky-btn">
+      <a href="#form-anchor" class="btn">
         <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
           <path
             stroke-linecap="round"
@@ -1111,9 +1043,6 @@
       </a>
     </div>
 
-    <!-- ══════════════════════════════════════════
-       JAVASCRIPT
-  ══════════════════════════════════════════ -->
     <script>
       (function () {
         var form = document.getElementById("lf");
@@ -1121,35 +1050,33 @@
         var btnEl = document.getElementById("sbmt");
         var stickyBar = document.getElementById("sticky-bar");
 
-        /* ── Validation helper ── */
-        function setErr(id, visible) {
-          document.getElementById(id).classList.toggle("show", visible);
+        /* Validation helper */
+        function setErr(id, show) {
+          document.getElementById(id).classList.toggle("show", show);
         }
 
-        /* ── Form submit ── */
+        /* Form submit */
         form.addEventListener("submit", async function (e) {
           e.preventDefault();
 
           var name = document.getElementById("name").value.trim();
           var phone = document.getElementById("phone").value.trim();
           var proj = document.getElementById("proj").value.trim();
-          var ok = true;
+          var valid = true;
 
           setErr("e-name", !name);
-          if (!name) ok = false;
+          if (!name) valid = false;
           setErr("e-phone", !phone);
-          if (!phone) ok = false;
+          if (!phone) valid = false;
           setErr("e-proj", !proj);
-          if (!proj) ok = false;
-          if (!ok) return;
+          if (!proj) valid = false;
+          if (!valid) return;
 
-          /* Loading state */
           btnEl.disabled = true;
           btnEl.innerHTML =
-            '<svg class="ic spin" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">' +
+            '<svg class="ic spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
             '<circle cx="12" cy="12" r="10" stroke-opacity=".25"/>' +
-            '<path d="M4 12a8 8 0 018-8" stroke-linecap="round"/>' +
-            "</svg> Wird gesendet\u2026";
+            '<path d="M4 12a8 8 0 018-8" stroke-linecap="round"/></svg> Wird gesendet...';
 
           try {
             var res = await fetch(form.action, {
@@ -1157,41 +1084,38 @@
               body: new FormData(form),
               headers: { Accept: "application/json" },
             });
-
             if (res.ok) {
               form.style.display = "none";
               okEl.classList.add("show");
               stickyBar.style.display = "none";
             } else {
-              throw new Error("server_error");
+              throw new Error("error");
             }
-          } catch (err) {
+          } catch (_) {
             btnEl.disabled = false;
             btnEl.innerHTML =
-              '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">' +
-              '<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>' +
-              "</svg> Kostenloses Angebot anfordern";
-            alert(
-              "Es gab ein Problem beim Senden. Bitte versuchen Sie es erneut oder rufen Sie uns an.",
-            );
+              '<svg class="ic" viewBox="0 0 24 24">' +
+              '<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>' +
+              " Kostenloses Angebot anfordern";
+            alert("Fehler beim Senden. Bitte erneut versuchen oder anrufen.");
           }
         });
 
-        /* ── Smooth scroll with sticky-header offset ── */
+        /* Smooth scroll */
         document.querySelectorAll('a[href^="#"]').forEach(function (a) {
           a.addEventListener("click", function (e) {
             var target = document.querySelector(this.getAttribute("href"));
             if (!target) return;
             e.preventDefault();
-            var top = target.getBoundingClientRect().top + window.scrollY - 72;
-            window.scrollTo({ top: top, behavior: "smooth" });
-            /* Focus first interactive element after scroll */
-            var firstField = target.querySelector("input, textarea");
-            if (firstField) {
+            window.scrollTo({
+              top: target.getBoundingClientRect().top + window.scrollY - 72,
+              behavior: "smooth",
+            });
+            var first = target.querySelector("input, textarea");
+            if (first)
               setTimeout(function () {
-                firstField.focus();
+                first.focus();
               }, 520);
-            }
           });
         });
       })();
